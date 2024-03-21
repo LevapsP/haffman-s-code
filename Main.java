@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) {
-        String text = "Text for the test";
+        String text = "abbccbbaacccddddddfffffff";
 
         TreeMap<Character, Integer> frequencies = countFrequency(text);
 
@@ -27,7 +27,7 @@ public class Main {
             encoded.append(codes.get(text.charAt(i)));
         }
 
-        System.out.println("Starting size: " + text.getBytes().length*8 + " bit");
+        System.out.println("Start size: " + text.getBytes().length*8 + " bit");
         System.out.println("End size: " + encoded.length() + " bit");
 
         String decoded = huffmanDecode(encoded.toString(), tree);
@@ -92,7 +92,7 @@ public class Main {
 
         @Override
         public int compareTo(CodeTreeNode o) {
-            return o.weight = weight;
+            return Integer.compare(o.weight, weight);
         }
 
         public String getCodeForCharacter(Character ch, String parentPath) {
