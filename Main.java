@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) {
-        String text = "abbccbbaacccddddddfffffff";
+        String text = "abbccbbaaccc";
 
         TreeMap<Character, Integer> frequencies = countFrequency(text);
 
